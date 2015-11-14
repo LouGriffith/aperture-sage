@@ -6,10 +6,16 @@ $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
 // Colors
+$text-primary:			#3d3d3d;
 $brand-primary:         #a80532;
+$inverse:				#fff;
 
-$logo-color: 			#3d3d3d;
+
+$logo-color: 			$inverse;
 $logo-color-hover:		$brand-primary;
+
+$hero-gradient-start:	#232526;
+$hero-gradient-end:		#414345;
 
 //Theme
 $site-border-top:		5px solid $brand-primary;

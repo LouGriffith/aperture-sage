@@ -1,0 +1,73 @@
+/* Footer Layout
+/*-------------------------------*/
+
+.global-footer{
+	padding: 2em;
+	border-bottom: 10px solid $brand-primary;
+	@include make-md-column(12);
+	background: $text-primary;
+
+	background: -webkit-linear-gradient(90deg, rgba($hero-gradient-start, 0.8) 10%, rgba($hero-gradient-end, 0.7) 90%); /* Chrome 10+, Saf5.1+ */
+	background:    -moz-linear-gradient(90deg, rgba($hero-gradient-start, 0.8) 10%, rgba($hero-gradient-end, 0.7) 90%); /* FF3.6+ */
+	background:     -ms-linear-gradient(90deg, rgba($hero-gradient-start, 0.8) 10%, rgba($hero-gradient-end, 0.7) 90%); /* IE10 */
+	background:      -o-linear-gradient(90deg, rgba($hero-gradient-start, 0.8) 10%, rgba($hero-gradient-end, 0.7) 90%); /* Opera 11.10+ */
+	background:         linear-gradient(90deg, rgba($hero-gradient-start, 0.8) 10%, rgba($hero-gradient-end, 0.7) 90%); /* W3C */
+	
+	.container{
+		padding: 0;
+	}
+
+}
+
+
+
+.footer-left{
+	@include make-xs-column(5);
+	padding: 0;
+}
+
+.footer-right{
+	@include make-xs-column(7);
+	padding: 0;
+
+
+	p{
+		text-align: right;
+		color: darken($inverse, 10%);
+		font-size: .85em;
+		margin: 0;
+		padding: 1em 0;
+
+		@media (max-width: $screen-sm-max) {
+			padding: 0;
+
+			span{
+				display: block;
+			}
+		}
+	}
+}
+
+/* Logo
+/*-------------------------------*/
+
+    a.footer-brand{
+    	position: relative;
+    	padding: 0 .5em;
+
+    	i{
+    		font-size: 3em;
+    		color: darken($logo-color, 30%);
+            transition: color 0.3s ease;
+
+    		&:hover{
+    			color: $logo-color-hover;
+    		}
+    	}
+    	
+    	span{
+    		visibility: hidden;
+    		float: left;
+    		display: none;
+    	}
+    }
