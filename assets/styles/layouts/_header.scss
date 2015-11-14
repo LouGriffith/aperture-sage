@@ -1,0 +1,36 @@
+/*-------------------------------*/
+/* Header
+/*-------------------------------*/
+
+/* Header
+/*-------------------------------*/
+
+	header.banner{
+		border-top: $site-border-top;
+		padding: 1em 0;
+	}
+
+/* Logo
+/*-------------------------------*/
+
+    a.brand{
+    	padding: 0;
+    	margin: 0;
+    	text-decoration: none;
+
+    	i{
+    		color: $logo-color;
+    		font-size: 4em;
+            transition: color 0.3s ease;
+
+    		&:hover{
+    			color: $logo-color-hover;
+    		}
+    	}
+    	
+    	span{
+    		visibility: hidden;
+    		float: left;
+    		display: none;
+    	}
+    }

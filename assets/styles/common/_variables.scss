@@ -6,4 +6,10 @@ $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
 // Colors
-$brand-primary:         #27ae60;
+$brand-primary:         #a80532;
+
+$logo-color: 			#3d3d3d;
+$logo-color-hover:		$brand-primary;
+
+//Theme
+$site-border-top:		5px solid $brand-primary;
