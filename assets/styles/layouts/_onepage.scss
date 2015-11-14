@@ -1,0 +1,289 @@
+/*-------------------------------*/
+/* One Page
+/*-------------------------------*/
+	.wrapper{
+		position: relative;
+	}
+
+	header.banner{
+		padding: 1em 0;
+		position: relative;
+		z-index: 60;
+	}
+
+	.page-shift{
+		z-index: 50;
+		position: absolute;
+		top: 0;
+	}
+
+	.navbar ul>li a{
+		color: $inverse;
+            transition: color 0.3s ease;
+
+		&:hover{
+			background: none;
+			color: $brand-primary;
+		}
+	}
+
+/* Hero
+/*-------------------------------*/
+	.hero{		
+		@include make-md-column(12);
+    	background: 50% 50% no-repeat;
+    	background-size: cover;
+    	overflow: hidden;
+
+    	-webkit-box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+    	-moz-box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+    	/* box-shadow: inset 0 0 50px rgba(0,0,0,0.5); */
+
+    	.container{
+    		position: relative;
+    		z-index: 10;
+    		padding: 0;
+    	}
+	}
+
+	.hero:after{
+		content: '';
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+
+	    background: -webkit-linear-gradient(90deg, rgba($hero-gradient-start, 0.8) 10%, rgba($hero-gradient-end, 0.7) 90%); /* Chrome 10+, Saf5.1+ */
+		background:    -moz-linear-gradient(90deg, rgba($hero-gradient-start, 0.8) 10%, rgba($hero-gradient-end, 0.7) 90%); /* FF3.6+ */
+		background:     -ms-linear-gradient(90deg, rgba($hero-gradient-start, 0.8) 10%, rgba($hero-gradient-end, 0.7) 90%); /* IE10 */
+		background:      -o-linear-gradient(90deg, rgba($hero-gradient-start, 0.8) 10%, rgba($hero-gradient-end, 0.7) 90%); /* Opera 11.10+ */
+		background:         linear-gradient(90deg, rgba($hero-gradient-start, 0.8) 10%, rgba($hero-gradient-end, 0.7) 90%); /* W3C */
+	}
+
+	.hero-box{
+		position: absolute;
+		top: 2em;
+		left: -14em;
+		@include make-md-column(8);
+  		background: rgba($brand-primary, 0.65);
+		transform: rotate(10deg);
+		background: rgba($brand-primary, 0.65);
+  		height: 350px;
+
+	}
+
+	.hero-container{
+		@include make-md-column(6);
+
+		h1{
+			position: absolute;
+			bottom: .5em;
+			left: 0;
+			z-index: 10;
+			font-size: 4.5em;
+			font-weight: 300;
+			text-align: center;
+			text-transform: uppercase;
+			color: $inverse;
+    		letter-spacing: -.025em;
+		}
+	}
+
+/* Differentiators
+/*-------------------------------*/
+
+	.differentiators{
+		@include make-md-column(12);
+		padding: 4em 0;
+    }
+
+    .differentiators-list{
+		@include make-md-column(7);
+		@include make-md-column-offset(1);
+
+		ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+    }
+
+    .differentiator{
+    	@include make-row;
+    	display: block;
+    	margin-bottom: 3em;
+		
+		.d-icon{
+    		@include make-xs-column(4);
+		}
+
+		.d-text{
+    		@include make-xs-column(8);
+		}
+
+		h4{
+			font-weight: 700;
+			text-transform: uppercase;
+    		letter-spacing: -.025em;
+		}
+    }
+
+    .d-icon{
+    	img{
+    		width: 100%;
+    	}
+    }
+
+    .differentiators-copy{
+		@include make-md-column(4);
+
+		h2{
+			display: block;
+			font-weight: 700;
+			text-transform: uppercase;
+    		letter-spacing: -.025em;
+    		margin-bottom: 0.25;
+
+		}
+
+		h4{
+			display: block;
+			font-weight: 100;
+    		font-style: italic;
+			color: lighten($text-primary, 40%);
+			margin-top: 0;
+			margin-bottom: 2em;
+			position: relative;
+
+			&:after{
+				content: '';
+			    position: absolute;
+			    bottom: -1.25em;
+			    left: 0;
+			    width: 2em;
+			    height: 5px;
+			    background: $brand-primary;
+			}
+		}
+
+		@media (max-width: $screen-sm-max) {
+			margin-bottom: 6em;
+		}
+    }
+
+/* Two Images
+/*-------------------------------*/
+
+	.two-images{
+		.image-left{
+			@include make-xs-column(6);
+			padding: 0;
+			height: 300px;
+			position: relative;
+			background: 50% 50% no-repeat;
+	    	background-size: cover;
+			-webkit-box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+	    	-moz-box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+    		/* box-shadow: inset 0 0 50px rgba(0,0,0,0.5); */
+
+			img{
+				width: 100%;
+			}
+		}
+
+		.image-left:after{
+			content: '';
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+
+		    background: -webkit-linear-gradient(90deg, rgba($hero-gradient-start, 0.8) 10%, rgba($hero-gradient-end, 0.7) 90%); /* Chrome 10+, Saf5.1+ */
+			background:    -moz-linear-gradient(90deg, rgba($hero-gradient-start, 0.8) 10%, rgba($hero-gradient-end, 0.7) 90%); /* FF3.6+ */
+			background:     -ms-linear-gradient(90deg, rgba($hero-gradient-start, 0.8) 10%, rgba($hero-gradient-end, 0.7) 90%); /* IE10 */
+			background:      -o-linear-gradient(90deg, rgba($hero-gradient-start, 0.8) 10%, rgba($hero-gradient-end, 0.7) 90%); /* Opera 11.10+ */
+			background:         linear-gradient(90deg, rgba($hero-gradient-start, 0.8) 10%, rgba($hero-gradient-end, 0.7) 90%); /* W3C */
+		}
+
+		.image-right{
+			@include make-xs-column(6);
+			padding: 0;
+			height: 200px;
+			position: relative;
+			background: 50% 50% no-repeat;
+	    	background-size: cover;
+			-webkit-box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+	    	-moz-box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+    		/* box-shadow: inset 0 0 50px rgba(0,0,0,0.5); */
+
+			img{
+				width: 100%;
+			}
+		}
+
+		.image-right:after{
+			content: '';
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+
+		    background: -webkit-linear-gradient(90deg, rgba($hero-gradient-start, 0.4) 10%, rgba($hero-gradient-end, 0.5) 90%); /* Chrome 10+, Saf5.1+ */
+			background:    -moz-linear-gradient(90deg, rgba($hero-gradient-start, 0.4) 10%, rgba($hero-gradient-end, 0.5) 90%); /* FF3.6+ */
+			background:     -ms-linear-gradient(90deg, rgba($hero-gradient-start, 0.4) 10%, rgba($hero-gradient-end, 0.5) 90%); /* IE10 */
+			background:      -o-linear-gradient(90deg, rgba($hero-gradient-start, 0.4) 10%, rgba($hero-gradient-end, 0.5) 90%); /* Opera 11.10+ */
+			background:         linear-gradient(90deg, rgba($hero-gradient-start, 0.4) 10%, rgba($hero-gradient-end, 0.5) 90%); /* W3C */
+		}
+	}
+
+/* Call To Action
+/*-------------------------------*/
+
+	.call-to-action{
+		@include make-md-column(12);
+		padding: 4em 0;
+		position: relative;
+
+    	.container{
+    		position: relative;
+    		z-index: 10;
+    		padding: 0;
+    		text-align: center;
+    	}
+
+    	.cta-content{
+    		@include make-md-column(12);
+    	}
+
+    	h3{
+    		font-weight: 300;
+    		font-size: 3em;
+    		text-transform: uppercase;
+    		letter-spacing: -.025em;
+    		position: relative;
+    		padding: 0;
+    		margin: 0;
+
+    	}
+
+    	h2{
+    		color: $brand-primary;
+    		padding: 0;
+    		margin: 0;
+    		font-weight: 800;
+    		font-size: 3em;
+    		text-transform: uppercase;
+    		letter-spacing: -.025em;
+    		position: relative;
+    	}
+
+    	p{
+    		@include make-md-column(6);
+    		margin: 0 auto;
+    		color: $inverse;
+    		margin-bottom: 2em;
+    	}
+	}
