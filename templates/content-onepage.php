@@ -11,7 +11,7 @@
 
 <div class="container-fluid differentiators">
 	<div class="container">
-		<div clas="row">
+		<div class="row">
 			<div class="differentiators-copy">
 				<h2><?php the_field('differentiator_headline'); ?></h2>
 				<h4><?php the_field('differentiator_subline'); ?></h4>
@@ -27,13 +27,13 @@
 					 
 					        <li class="differentiator">
 					        	<?php 
-					        		$d_icon = get_sub_field('differentiator_icon');
+					        		$d_icon = get_sub_field('differentiator_favicon');
 					        		$d_headline = get_sub_field('differentiator_headline');
 					        		$d_text = get_sub_field('differentiator_text');
 					        	?>
 
 				        		<div class="d-icon">
-									<img src="<?php echo $d_icon ?>" alt="<?php echo $d_headline ?>" />
+				        			<i class="fa <?php echo $d_icon ?>"></i>
 				        		</div>
 
 				        		<div class="d-text">
@@ -62,7 +62,7 @@
 
 		<?php $right_image = wp_get_attachment_image_src(get_field('right_image'), 'full'); ?>
 		<div class="image-left" style="background-image:url(<?php echo $right_image[0]; ?>)">
-			
+
 		</div>
 	</div>
 </div>

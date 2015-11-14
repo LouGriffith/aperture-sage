@@ -6,7 +6,7 @@
 	}
 
 	header.banner{
-		padding: 1em 0;
+		padding: 0;
 		position: relative;
 		z-index: 60;
 	}
@@ -69,7 +69,7 @@
   		background: rgba($brand-primary, 0.65);
 		transform: rotate(10deg);
 		background: rgba($brand-primary, 0.65);
-  		height: 350px;
+  		height: 400px;
 
 	}
 
@@ -116,6 +116,11 @@
 		
 		.d-icon{
     		@include make-xs-column(4);
+    		text-align: right;
+    		i{
+    			font-size: 5em;
+    			color: lighten($text-primary, 40%);
+    		}
 		}
 
 		.d-text{
