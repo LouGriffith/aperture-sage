@@ -47,6 +47,10 @@
 
 .gf_name_has_2{
   @include make-row();
+
+  @media (max-width: $screen-xs-max) {
+    padding: 0 1em;
+  }
 }
 
 .name_first{
