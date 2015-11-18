@@ -30,7 +30,7 @@ use Roots\Sage\Wrapper;
         ?>
         <div class="page-shift">
           <div class="" role="document">
-            <div class="content row">
+            <div class="content">
               <main>
                 <?php include Wrapper\template_path(); ?>
               </main><!-- /.main -->
@@ -42,6 +42,16 @@ use Roots\Sage\Wrapper;
             get_template_part('templates/footer');
           ?>
 
+        </div>
+
+        <!-- Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button><h4 class="modal-title">Contact Form</h4></div>
+                    <div class="modal-body"><?php echo do_shortcode('[gravityform id="1" title=false description="false" ajax="true"]') ?></div>
+                </div>
+            </div>
         </div>
       </div>
 

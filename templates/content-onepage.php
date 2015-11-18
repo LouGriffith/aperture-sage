@@ -11,7 +11,7 @@
 
 <div class="container-fluid differentiators">
 	<div class="container">
-		<div class="row">
+		<div class="">
 			<div class="differentiators-copy">
 				<h2><?php the_field('differentiator_headline'); ?></h2>
 				<h4><?php the_field('differentiator_subline'); ?></h4>
@@ -54,16 +54,14 @@
 <!-- /end one-page-differentiators-->
 
 <div class="two-images">
-	<div class="row">
-		<?php $left_image = wp_get_attachment_image_src(get_field('left_image'), 'full'); ?>
-		<div class="image-left" style="background-image:url(<?php echo $left_image[0]; ?>)">
+	<?php $left_image = wp_get_attachment_image_src(get_field('left_image'), 'full'); ?>
+	<div class="image-left" style="background-image:url(<?php echo $left_image[0]; ?>)">
 
-		</div>
+	</div>
 
-		<?php $right_image = wp_get_attachment_image_src(get_field('right_image'), 'full'); ?>
-		<div class="image-left" style="background-image:url(<?php echo $right_image[0]; ?>)">
+	<?php $right_image = wp_get_attachment_image_src(get_field('right_image'), 'full'); ?>
+	<div class="image-left" style="background-image:url(<?php echo $right_image[0]; ?>)">
 
-		</div>
 	</div>
 </div>
 <!-- /end two-images-->
@@ -73,7 +71,12 @@
 	<div class="container">
 		<div class="cta-content">
 			<h3><?php the_field('cta_headline'); ?></h3>
-			<h2><?php the_field('cta_phone'); ?></h2>
+			<h2><a href="tel:<?php the_field('cta_phone'); ?>"><?php the_field('cta_phone'); ?></a></h2>
+
+			<!-- Button trigger modal -->
+			<button type="button" class="btn btn-primary btn-lg btn-email" data-toggle="modal" data-target="#myModal">
+			  <i class="fa fa-envelope-o"></i> &nbsp; Email Us
+			</button>
 	 	</div>
  	</div>
 </div>

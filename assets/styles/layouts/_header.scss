@@ -40,8 +40,12 @@
             transition: color 0.3s ease;
 
     		&:hover{
-    			color: $logo-color-hover;
+    			color: #d3d3d3;
     		}
+
+            @media (max-width: $screen-sm-max) {
+                font-size: 3.5em;
+            }
     	}
     	
     	span{
